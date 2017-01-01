@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+  app:
+    image: 'golang:1.7-onbuild'
+    volumes:
+      - 'data:/go'
+      - '.:/go/src/app'
+
+volumes:
+  data:
+    driver: 'local'
